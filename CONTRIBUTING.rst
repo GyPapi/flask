@@ -79,7 +79,8 @@ First time setup
 
         pip install -e ".[dev]"
 
-- Install the pre-commit hooks:
+- Install the `pre-commit framework`_.
+- Install the pre-commit hooks::
 
         pre-commit install --install-hooks
 
@@ -89,6 +90,7 @@ First time setup
 .. _email: https://help.github.com/en/articles/setting-your-commit-email-address-in-git
 .. _Fork: https://github.com/pallets/flask/fork
 .. _Clone: https://help.github.com/en/articles/fork-a-repo#step-2-create-a-local-clone-of-your-fork
+.. _pre-commit framework: https://pre-commit.com/#install
 
 Start coding
 ~~~~~~~~~~~~
@@ -106,7 +108,7 @@ Start coding
 
 - Using your favorite editor, make your changes, `committing as you go`_.
 - Include tests that cover any code changes you make. Make sure the test fails
-  without your patch. `Run the tests. <contributing-testsuite_>`_.
+  without your patch. `Run the tests <contributing-testsuite_>`_.
 - Push your commits to GitHub and `create a pull request`_ by using::
 
         git push --set-upstream origin your-branch-name
@@ -119,7 +121,7 @@ Start coding
 .. _pre-commit: https://pre-commit.com
 .. _create a pull request: https://help.github.com/en/articles/creating-a-pull-request
 
-.. _contributing-testsuite:
+.. _contributing-testsuite: #running-the-tests
 
 Running the tests
 ~~~~~~~~~~~~~~~~~
@@ -134,7 +136,7 @@ suite when you submit your pull request.
 
 The full test suite takes a long time to run because it tests multiple
 combinations of Python and dependencies. You need to have Python 2.7, 3.4,
-3.5 3.6, and PyPy 2.7 installed to run all of the environments. Then run::
+3.5, 3.6, 3.7 and PyPy 2.7 installed to run all of the environments. Then run::
 
     tox
 
@@ -162,6 +164,7 @@ Building the docs
 Build the docs in the ``docs`` directory using Sphinx::
 
     cd docs
+    pip install -r requirements.txt
     make html
 
 Open ``_build/html/index.html`` in your browser to view the docs.
